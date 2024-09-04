@@ -1,3 +1,170 @@
 <footer>
-    
+    <div class="footer-area">
+        <div class="footer">
+            <div class="container upper-area">
+                <div class="logo-area">
+                    <img src="../../public/images/logo.png">
+                    <div class="subscribe-area">
+                        <p>Join our newsletter to stay up to date on features and releases.</p>
+                        <div class="form-area">
+                            <input placeholder="Enter your email">
+                            <button>Subscribe</button>
+                        </div>
+                        <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+                    </div>
+                    <div class="link-area">
+                        <ul>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Project</a></li>
+                            <li><a href="#">Contact</a></li>
+                            <li><a href="#">Services</a></li>
+                        </ul>
+                        <ul>
+                            <li><a href="#">F</a></li>
+                            <li><a href="#">I</a></li>
+                            <li><a href="#">T</a></li>
+                            <li><a href="#">L</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-area">
+                    <div class="map-container">
+                        <div class="about-us">
+                            <strong>About Us</strong>
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/servicies">Services</a></li>
+                                <li><a href="#">Teams</a></li>
+                                <li><a href="#">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="services">
+                            <strong>Services</strong>
+                            <ul>
+                                <li>Window</li>
+                                <li>Residential</li>
+                                <li>Commercial</li>
+                                <li>Apartment</li>
+                                <li>Residential</li>
+                            </ul>
+                        </div>
+                        <div class="follow-us">
+                            <strong>Follow Us</strong>
+                            <ul>
+                                <li>Facebook</li>
+                                <li>Instagram</li>
+                                <li>Twitter</li>
+                                <li>LinkdIn</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container lower-area">
+                <p class="copyright-text">2023 Ddsgnr. All right reserved.</p>
+                <ul class="term-list">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </footer>
+
+<style>
+    footer{
+        width: 100%;
+    }
+    input{
+        width: 60%;
+        padding: 8px 5px;
+        border-radius: 5px;
+    }
+    button{
+        padding: 8px 20px;
+        background-color: white;
+        border-radius: 5px;
+    }
+    ul{
+        text-align: left;
+        padding: 0;
+    }
+    li{
+        list-style: none;
+        padding: 5px 0;
+    }
+    a{
+        color: black;
+    }
+    .footer-area{
+        width: 90%;
+        margin: 0 auto;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-area{
+        width: 40%;
+    }
+    .link-area{
+        display: none;
+    }
+    .map-area{
+        width: 50%;
+        padding-right: 20px;
+    }
+    .map-area a{
+        text-decoration: none;
+    }
+    .map-container, .term-list{
+        display: flex;
+        justify-content: space-around;
+    }
+    .lower-area{
+        margin-top: 80px;
+        padding-top: 1rem;
+        border-top: solid 1px black;
+    }
+    .term-list{
+        right: 0;
+    }
+    .term-list li{
+        padding: 0 8px;
+    }
+    @media screen and (max-width: 680px) {
+        .container{
+            text-align: center;
+            display: block;
+        }
+        .logo-area{
+            width: 100%;
+            text-align: center;
+        }
+        .subscribe-area{
+            display: none;
+        }
+        .link-area{
+            display: block;
+        }
+        .link-area ul{
+            display: flex;
+            justify-content: center;
+        }
+        .link-area li{
+            margin: 0 10px;
+        }
+        .map-area{
+            display: none;
+        }
+        .lower-area{
+            margin-top: 10px;
+        }
+        .copyright-text{
+            display: block;
+        }
+    }
+</style>
