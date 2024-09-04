@@ -1,9 +1,12 @@
+---
+import "../styles/global.css"
+---
 <footer>
     <div class="footer-area">
         <div class="footer">
             <div class="container upper-area">
                 <div class="logo-area">
-                    <img src="../../public/images/logo.png">
+                    <a href="#top"><img src="../../public/images/logo.png"></a>
                     <div class="subscribe-area">
                         <p>Join our newsletter to stay up to date on features and releases.</p>
                         <div class="form-area">
@@ -13,33 +16,33 @@
                         <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
                     </div>
                     <div class="link-area">
-                        <ul>
-                            <li><a href="#"><strong>About</strong></a></li>
+                        <ul class="page-links">
+                            <li><a href="/about"><strong>About</strong></a></li>
                             <li><a href="#"><strong>Project</strong></a></li>
-                            <li><a href="#"><strong>Contact</strong></a></li>
-                            <li><a href="#"><strong>Services</strong></a></li>
+                            <li><a href="/contact"><strong>Contact</strong></a></li>
+                            <li><a href="/servicies"><strong>Services</strong></a></li>
                         </ul>
-                        <ul>
-                            <li><a href="#"><img src="../../public/images/icons/Facebook.svg"></a></li>
-                            <li><a href="#"><img src="../../public/images/icons/Instagram.svg"></a></li>
-                            <li><a href="#"><img src="../../public/images/icons/Twitter.svg"></a></li>
-                            <li><a href="#"><img src="../../public/images/icons/LinkedIn.svg"></a></li>
+                        <ul class="icon-links">
+                            <li><a href="https://www.facebook.com/"><img src="../../public/images/icons/Facebook.svg"></a></li>
+                            <li><a href="https://www.instagram.com/"><img src="../../public/images/icons/Instagram.svg"></a></li>
+                            <li><a href="https://x.com/i/flow/login"><img src="../../public/images/icons/Twitter.svg"></a></li>
+                            <li><a href="https://www.linkedin.com"><img src="../../public/images/icons/LinkedIn.svg"></a></li>
                         </ul>
                     </div>
                 </div>
                 <div class="map-area">
                     <div class="map-container">
-                        <div class="about-us">
+                        <div class="about-us links">
                             <strong class="list-heading">About Us</strong>
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="#top">Home</a></li>
                                 <li><a href="/about">About</a></li>
                                 <li><a href="/servicies">Services</a></li>
                                 <li><a href="#">Teams</a></li>
-                                <li><a href="#">Contact</a></li>
+                                <li><a href="/contact">Contact</a></li>
                             </ul>
                         </div>
-                        <div class="services">
+                        <div class="services links">
                             <strong class="list-heading">Services</strong>
                             <ul>
                                 <li>Window</li>
@@ -49,13 +52,13 @@
                                 <li>Residential</li>
                             </ul>
                         </div>
-                        <div class="follow-us">
+                        <div class="follow-us links">
                             <strong class="list-heading">Follow Us</strong>
-                            <ul>
-                                <li><img src="../../public/images/icons/Facebook.svg"><span>Facebook</span></li>
-                                <li><img src="../../public/images/icons/Instagram.svg"><span>Instagram</span></li>
-                                <li><img src="../../public/images/icons/Twitter.svg"><span>Twitter</span></li>
-                                <li><img src="../../public/images/icons/LinkedIn.svg"><span>LinkdIn</span></li>
+                            <ul class="SNS-links">
+                                <a href="https://www.facebook.com/"><li><img src="../../public/images/icons/Facebook.svg"><span>Facebook</span></li></a>
+                                <a href="https://www.instagram.com/"><li><img src="../../public/images/icons/Instagram.svg"><span>Instagram</span></li></a>
+                                <a href="https://x.com/i/flow/login"><li><img src="../../public/images/icons/Twitter.svg"><span>Twitter</span></li></a>
+                                <a href="https://www.linkedin.com"><li><img src="../../public/images/icons/LinkedIn.svg"><span>LinkdIn</span></li></a>
                             </ul>
                         </div>
                     </div>
@@ -101,7 +104,8 @@
     .footer-area{
         width: 90%;
         margin: 0 auto;
-        padding-top: 100px;
+        padding-top: 80;
+        padding-bottom: 100px;
     }
     .container{
         width: 100%;
@@ -125,10 +129,13 @@
     .list-heading{
         font-weight: bold;
     }
+    .links ul{
+        margin-top: 20px;
+    }
     .map-area a{
         text-decoration: none;
     }
-    .map-area li{
+    .SNS-links li{
         display: flex;
         align-items: center;
     }
@@ -162,7 +169,14 @@
         .link-area{
             display: block;
         }
-        .link-area ul{
+        .page-links{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            font-weight: bold;
+        }
+        .icon-links{
+            margin-top: 20px;
             display: flex;
             justify-content: center;
         }
@@ -180,6 +194,10 @@
         }
         .copyright-text{
             display: block;
+            margin-top: 1rem;
+        }
+        .term-list{
+            margin-top: 2rem;
         }
     }
 </style>
