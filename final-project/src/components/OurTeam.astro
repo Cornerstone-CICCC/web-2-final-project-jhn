@@ -1,0 +1,307 @@
+<div class="container">
+  <div class="title">
+    <h2>Our Team</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-image">
+        <img src="../../public/images/our-team/image1.png" alt="person image" />
+      </div>
+      <div class="card-text">
+        <h5>Leslie Alexander</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique.
+        </p>
+        <div class="icons">
+          <a href=""
+            ><img
+              src="../../public/images/icons/LinkedIn.svg"
+              alt="LinkedIn"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Twitter.svg"
+              alt="Twitter"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Dribble.svg"
+              alt="Dribble"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="../../public/images/our-team/image2.png" alt="person image" />
+      </div>
+      <div class="card-text">
+        <h5>Ralph Edwards</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique.
+        </p>
+        <div class="icons">
+          <a href=""
+            ><img
+              src="../../public/images/icons/LinkedIn.svg"
+              alt="LinkedIn"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Twitter.svg"
+              alt="Twitter"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Dribble.svg"
+              alt="Dribble"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="../../public/images/our-team/image3.png" alt="person image" />
+      </div>
+      <div class="card-text">
+        <h5>Annette Black</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique.
+        </p>
+        <div class="icons">
+          <a href=""
+            ><img
+              src="../../public/images/icons/LinkedIn.svg"
+              alt="LinkedIn"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Twitter.svg"
+              alt="Twitter"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Dribble.svg"
+              alt="Dribble"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img src="../../public/images/our-team/image4.png" alt="person image" />
+      </div>
+      <div class="card-text">
+        <h5>Savannah Nguyen</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros elementum tristique.
+        </p>
+        <div class="icons">
+          <a href=""
+            ><img
+              src="../../public/images/icons/LinkedIn.svg"
+              alt="LinkedIn"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Twitter.svg"
+              alt="Twitter"
+            /></a
+          >
+          <a href=""
+            ><img
+              src="../../public/images/icons/Dribble.svg"
+              alt="Dribble"
+            /></a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="show-more-btn">
+    <button>View More</button>
+  </div>
+</div>
+
+<style>
+  .container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: #f7f7f7;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 80px;
+  }
+  .container .title h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .container .title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    width: 90%;
+  }
+  .title {
+    width: 380px;
+    height: auto;
+  }
+
+  /* .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .cards {
+    padding: 0 45px;
+    display: grid;
+    gap: 50px 50px;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    height: auto;
+    border: 0.5px solid #676767;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .card-image img {
+    width: 100%;
+  }
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  .card-text {
+    width: 100%;
+    height: auto;
+    margin: 50px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-text h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .card-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 85%;
+    padding-bottom: 25px;
+  }
+  .cards .card {
+    display: none;
+  }
+  .cards .card:nth-child(-n + 3) {
+    display: flex;
+  }
+  .cards .visible {
+    display: flex;
+  }
+
+  .show-more-btn {
+    display: flex;
+    justify-content: center;
+  }
+  .show-more-btn button {
+    width: 75%;
+    height: auto;
+    padding: 25px;
+    font-size: 1rem;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-top: 60px;
+    background-color: transparent;
+  }
+  .hidden {
+    display: none;
+  }
+  @media screen and (min-width: 640px) {
+    .cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .card {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+    .container .title {
+      width: 100%;
+    }
+    .container .title h2 {
+      font-size: 3rem;
+    }
+    .container .title p {
+      width: 100%;
+    }
+    .card-text {
+      align-items: start;
+      margin: auto 0 auto 40px;
+    }
+    .card-text h5 {
+      font-size: 20px;
+    }
+    .card-text p {
+      width: 90%;
+      text-align: start;
+    }
+    .cards .card {
+      display: flex;
+    }
+    .show-more-btn {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const showMoreBtn = document.querySelector(".show-more-btn");
+    const items = document.querySelectorAll(".card");
+
+    if (items.length <= 3) {
+      showMoreBtn.classList.add("hidden");
+    }
+
+    showMoreBtn.addEventListener("click", () => {
+      items.forEach((item) => {
+        item.classList.add("visible");
+      });
+
+      showMoreBtn.classList.add("hidden");
+    });
+  });
+</script>
