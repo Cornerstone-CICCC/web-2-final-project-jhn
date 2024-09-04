@@ -1,0 +1,106 @@
+---
+import '../styles/global.css';
+---
+
+<section class="top">
+  <div class="top-content">
+    <div class="top-info">
+      <h1 class="title">A Clean Home,<br>
+        A Happy Life,<br>
+        Let Us Handle the Dirty Work!</h1>
+      <p class="text">We develop innovative design solutions that enable our clients to enhance their competitive advantage.</p>
+      <div class="btn-wrap">
+        <button class="btn">Request A Quote</button>
+        <button class="btn btn-secondary">Learn More</button>
+      </div>
+    </div>
+    <img src="../../public/images/top-image.png" alt="man is cleaning">
+  </div>
+</section>
+
+<style>
+  section {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .top-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .top-info {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .title {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 48px;
+  }
+
+  .text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  .btn-wrap {
+    display: flex;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  .btn {
+    background-color: var(--color_black);
+    color: var(--color_white);
+    padding: 8px 20px;
+    border-radius: 5px;
+    width: fit-content;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .btn-secondary {
+    background-color: var(--color_white);
+    border: 1px solid var(--color_black);
+    color: var(--color_black);
+  }
+
+  @media screen and (min-width: 1080px) {
+    .top-content {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      gap: 60px;
+      padding: 0;
+    }
+
+    .top-info {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      padding-left: 80px;
+    }
+
+    .title {
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 48px;
+    }
+
+    img {
+      max-height: 900px;
+      object-fit: cover;
+      width: 50%;
+    }
+  }
+
+
+</style>

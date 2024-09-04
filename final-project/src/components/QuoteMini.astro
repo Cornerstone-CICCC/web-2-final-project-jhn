@@ -1,0 +1,79 @@
+---
+import '../styles/global.css'
+---
+
+<section>
+  <form action="" class="miniform">
+    <div class="input-vertical">
+      <label for="fullname">Full name</label>
+      <input type="text" name="fullname" id="fullname" required>
+    </div>
+    <div class="input-vertical">
+      <label for="phone">Phone number</label>
+      <input type="tel" name="phone" id="phone" required>
+    </div>
+    <div class="input-vertical">
+      <label for="comment">Comment</label>
+      <input type="text" name="comment" id="comment" required>
+    </div>
+    <input class="btn" type="submit" value="Request A Quote" />
+  </form>
+</section>
+
+<style>
+  section {
+    font-family: "Roboto", sans-serif;
+    padding: 48px 24px;
+  }
+
+  .miniform {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .input-vertical {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-grow: 1;
+  }
+
+  input {
+    padding: 15px 8px;
+    border-radius: 5px;
+    border: 1px solid var(--color_black);
+  }
+
+  .btn {
+    background-color: var(--color_black);
+    color: var(--color_white);
+    padding: 8px 20px;
+    border-radius: 5px;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @media screen and (min-width: 680px) {
+    section {
+      padding: 55px 24px;
+    }
+    .miniform {
+      flex-direction: row;
+      align-items: flex-end;
+      gap: 24px;
+      max-width: 1200px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .btn {
+      height: fit-content;
+      padding: 15px 14px;
+    }
+  }
+
+</style>
