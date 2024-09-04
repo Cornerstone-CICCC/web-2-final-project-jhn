@@ -1,5 +1,5 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
 
 const serviceId = import.meta.env.PUBLIC_SERVICE_ID;
 const templateId = import.meta.env.PUBLIC_TEMPLATE_ID;
@@ -11,16 +11,18 @@ const userId = import.meta.env.PUBLIC_USER_ID;
     <div class="contact-info">
       <p class="sub-title">Contact us</p>
       <h1 class="title">Request a quote</h1>
-      <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      </p>
       <form class="form" id="contact-form">
         <div class="form-section">
           <div class="input-vertical">
             <label for="fullname">Full name</label>
-            <input type="text" name="fullname" id="fullname" required>
+            <input type="text" name="fullname" id="fullname" required />
           </div>
           <div class="input-vertical">
             <label for="phone">Phone number</label>
-            <input type="tel" name="phone" id="phone" required>
+            <input type="tel" name="phone" id="phone" required />
           </div>
         </div>
         <div class="form-section">
@@ -43,16 +45,16 @@ const userId = import.meta.env.PUBLIC_USER_ID;
         </div>
         <div class="input-vertical">
           <label for="message">Message</label>
-          <textarea  name="message" id="message"></textarea>
+          <textarea name="message" id="message"></textarea>
         </div>
         <div>
-          <input type="checkbox" name="terms" id="terms" required>
+          <input type="checkbox" name="terms" id="terms" required />
           <label for="terms">I accept the <span>Terms</span></label>
         </div>
         <input class="btn" type="submit" value="Send" />
       </form>
     </div>
-    <img src="/images/contact.png" alt="woman" class="image">
+    <img src="/images/contact.png" alt="woman" class="image" />
   </div>
 </section>
 
@@ -61,6 +63,8 @@ const userId = import.meta.env.PUBLIC_USER_ID;
     display: flex;
     background-color: var(--color_grey);
     padding: 48px 24px;
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 
   .contact-wrap {
@@ -102,7 +106,9 @@ const userId = import.meta.env.PUBLIC_USER_ID;
     font-size: 16px;
   }
 
-  input, textarea, select {
+  input,
+  textarea,
+  select {
     padding: 15px 8px;
     border-radius: 5px;
     border: 1px solid var(--color_black);
@@ -177,7 +183,7 @@ const userId = import.meta.env.PUBLIC_USER_ID;
       display: flex;
       gap: 80px;
       margin: 0 auto;
-      flex-wrap: nowrap
+      flex-wrap: nowrap;
     }
 
     .contact-info {
@@ -205,42 +211,46 @@ const userId = import.meta.env.PUBLIC_USER_ID;
       width: fit-content;
     }
   }
-
 </style>
 
-<script is:inline
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-</script>
-<script type="module" define:vars={{ userId }} >
+<script
+  is:inline
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+></script>
+<script type="module" define:vars={{ userId }}>
   // const userId = userIdElement.getAttribute('data-user-id');
-   (function(){
-      emailjs.init({
-        publicKey: userId,
-      });
-   })();
+  (function () {
+    emailjs.init({
+      publicKey: userId,
+    });
+  })();
 </script>
 
 <script is:inline define:vars={{ serviceId, templateId }}>
-  document.getElementById('contact-form').addEventListener('submit', function(event) {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
 
-    event.preventDefault();
+      const formData = {
+        fullname: document.getElementById("fullname").value,
+        phone: document.getElementById("phone").value,
+        service: document.getElementById("service").value,
+        time: document.getElementById("time").value,
+        message: document.getElementById("message").value,
+      };
 
-    const formData = {
-      fullname: document.getElementById('fullname').value,
-      phone: document.getElementById('phone').value,
-      service: document.getElementById('service').value,
-      time: document.getElementById('time').value,
-      message: document.getElementById('message').value,
-    };
-
-    emailjs.send(serviceId, templateId, formData)
-      .then(function(response) {
-        console.log('SUCCESS!', response.status, response.text);
-        alert('Your message has been sent successfully!');
-      }, function(error) {
-        console.error('FAILED...', error);
-        alert('There was an error sending your message. Please try again later.');
-      });
-  });
-
+      emailjs.send(serviceId, templateId, formData).then(
+        function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          alert("Your message has been sent successfully!");
+        },
+        function (error) {
+          console.error("FAILED...", error);
+          alert(
+            "There was an error sending your message. Please try again later."
+          );
+        }
+      );
+    });
 </script>
