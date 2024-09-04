@@ -1,7 +1,12 @@
 ---
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import QuoteMini from "../components/QuoteMini.astro";
 import TopMain from "../components/TopMain.astro";
+import Pictures from "../components/Pictures.astro";
+import RequestForm from "../components/RequestForm.astro";
+import CTA from "../components/CTA.astro";
+import NewsLetter from "../components/NewsLetter.astro";
 import '../styles/global.css';
 ---
 
@@ -18,9 +23,13 @@ import '../styles/global.css';
   </head>
   <body>
     <main>
+      <Header />
       <TopMain />
       <QuoteMini />
-      
+      <Pictures />
+      <RequestForm />
+      <CTA />
+      <NewsLetter />
       <Footer />
     </main>
   </body>
