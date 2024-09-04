@@ -1,36 +1,20 @@
 ---
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
 import QuoteMini from "../components/QuoteMini.astro";
 import TopMain from "../components/TopMain.astro";
 import Pictures from "../components/Pictures.astro";
 import RequestForm from "../components/RequestForm.astro";
 import CTA from "../components/CTA.astro";
 import NewsLetter from "../components/NewsLetter.astro";
-import '../styles/global.css';
+
+const title = 'Ddsgnr'
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon2.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Ddsgnr</title>
-  </head>
-  <body>
-    <main>
-      <Header />
-      <TopMain />
-      <QuoteMini />
-      <Pictures />
-      <RequestForm />
-      <CTA />
-      <NewsLetter />
-      <Footer />
-    </main>
-  </body>
-</html>
+<BaseLayout title={title}>
+  <TopMain />
+  <QuoteMini />
+  <Pictures />
+  <RequestForm />
+  <CTA />
+  <NewsLetter />
+</BaseLayout>
