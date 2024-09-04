@@ -1,0 +1,240 @@
+---
+import "../styles/global.css";
+---
+
+<div class="container">
+  <div class="title">
+    <h2>Our Services</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+  </div>
+  <div class="cards">
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image1.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>One Bedroom Apartment</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image2.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>Window Cleaning</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image3.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>Residential Cleaning</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image4.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>Construction Cleaning</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image5.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>Commercial Cleaning</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-image">
+        <img
+          src="../../public/images/pic-section/image6.png"
+          alt="house image"
+        />
+      </div>
+      <div class="card-text">
+        <h5>Two Bedroom Apartment</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+          varius enim in eros.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="show-more-btn">
+    <button>View More</button>
+  </div>
+</div>
+
+<style>
+  
+  .container {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    background-color: #F7F7F7;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 100px auto 80px;
+  }
+  .container .title h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .container .title p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    text-align: center;
+    width: 90%;
+  }
+
+  .cards {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px 30px;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 410px;
+    height: auto;
+    border: 0.5px solid #676767;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  .card-image img {
+    width: auto;
+  }
+  .card-image {
+    width: 100%;
+    height: auto;
+  }
+  .card-text {
+    width: 100%;
+    height: auto;
+    margin: 50px auto 25px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .card-text h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .card-text p {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    width: 80%;
+  }
+  .show-more-btn {
+    display: none;
+  }
+
+  @media screen and (max-width: 680px) {
+    .container .title h2 {
+      font-size: 2rem;
+    }
+    .cards {
+      padding: 0 20px;
+    }
+    .title {
+      margin: 70px auto 50px;
+    }
+    .cards .card {
+      display: none;
+    }
+    .cards .card:nth-child(-n + 3) {
+      display: block;
+    }
+    .cards .visible {
+      display: block;
+    }
+
+    .show-more-btn {
+      display: flex;
+      justify-content: center;
+    }
+    .show-more-btn button {
+      width: 75%;
+      height: auto;
+      padding: 25px;
+      font-size: 1rem;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-top: 60px;
+      background-color: transparent;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const showMoreBtn = document.querySelector(".show-more-btn");
+    const items = document.querySelectorAll(".card");
+
+    if (items.length <= 3) {
+      showMoreBtn.classList.add("hidden");
+    }
+
+    showMoreBtn.addEventListener("click", () => {
+      items.forEach((item) => {
+        item.classList.add("visible");
+      });
+
+      // ボタンを隠す
+      showMoreBtn.classList.add("hidden");
+    });
+  });
+</script>
