@@ -1,46 +1,188 @@
 ---
-
+import "../styles/global.css";
 ---
 
 <header>
-  <div class="logo">
-    <img src="https://placehold.co/30x30" alt="main logo" />
-    <span>Ddsgnr</span>
+  <div class="banner">
+    <div class="info-list">
+      <ul>
+        <li>For emergency cases: 567 123 45 67</li>
+        <li>Location: 121 Wallstreet Street, NY , USA</li>
+        <li>Open hours: 9.00-24.00 Mon-Sat</li>
+        <li>Email:info@ddsgnr.com</li>
+      </ul>
+    </div>
+    <div class="sns-icons">
+      <ul>
+        <li>
+          <img
+            src="../../public/images/icons/Facebook.svg"
+            alt="Facebook icon"
+          />
+        </li>
+        <li>
+          <img
+            src="../../public/images/icons/Instagram.svg"
+            alt="Instagram icon"
+          />
+        </li>
+        <li>
+          <img src="../../public/images/icons/Twitter.svg" alt="Twitter icon" />
+        </li>
+        <li>
+          <img
+            src="../../public/images/icons/LinkedIn.svg"
+            alt="LinkedIn icon"
+          />
+        </li>
+      </ul>
+    </div>
   </div>
-  <nav>
-    <ul class="ul">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Teams</a></li>
-      <li><a href="#">Contact</a></li>
-      <li>
-        <button>Request A Quote</button>
-      </li>
-    </ul>
-  </nav>
+  <div class="container">
+    <div class="hum-btn">
+      <img src="../../public/images/Menu.svg" alt="hum menu" />
+    </div>
+    <div class="logo">
+      <img src="../../public/images/main-logo.svg" alt="main logo" />
+    </div>
+    <nav>
+      <ul class="ul">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="#">Contact</a></li>
+        <li><a href="#">Request A Quote</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <style>
-  header {
+  ul {
     display: flex;
-    justify-content: space-around;
   }
-  .ul {
-    display: flex;
-    gap: 4rem;
-  }
-  .ul li {
+  li {
     list-style: none;
-    padding: 0.5rem;
   }
-  .ul li a {
+  ul li a {
     text-decoration: none;
     color: black;
   }
-  button {
-    background-color: black;
-    color: white;
+
+  .banner {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    justify-content: space-between;
+    padding-right: 50px;
+    border-bottom: 1px solid black;
+  }
+  .info-list {
+    font-size: 0.8rem;
+  }
+  .info-list li {
+    border-right: 0.5px solid black;
+    padding: 0 0.5rem 0;
+  }
+  .info-list li:last-child {
+    border: none;
+  }
+  .sns-icons img {
+    margin: 0 10px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid #676767;
+  }
+  .logo {
+    margin: auto 0;
+  }
+  .ul {
+    gap: 1.5rem;
+  }
+  .ul li {
     padding: 0.5rem;
   }
+
+  .ul li:last-child a {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  /* ---------hum-btn---------- */
+  .container .hum-btn {
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 35px;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 12;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container {
+    position: relative;
+  }
+
+  .hum-btn {
+    display: none;
+  }
+
+  /* ---------responsive--------- */
+  @media screen and (max-width: 680px) {
+    .hum-btn {
+      display: flex;
+    }
+    .banner {
+      display: none;
+    }
+    ul {
+      flex-direction: column;
+    }
+    nav {
+      position: absolute;
+      top: 72px;
+      left: -1000px;
+    }
+    ul li:last-child {
+      margin-left: -10px;
+    }
+    .container {
+      padding-left: 30px;
+    }
+    .ul {
+      padding-left: 75px;
+    }
+    .open {
+      top: 72px;
+      left: 0px;
+      width: 100%;
+      background-color: blanchedalmond;
+      transition: all 0.5s ease;
+    }
+  }
 </style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const humBtn = document.querySelector(".hum-btn");
+    const menu = document.querySelector("nav");
+
+    humBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+  });
+</script>
