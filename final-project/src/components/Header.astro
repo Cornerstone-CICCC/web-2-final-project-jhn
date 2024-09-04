@@ -43,7 +43,9 @@ import "../styles/global.css";
       <img src="../../public/images/Menu.svg" alt="hum menu" />
     </div>
     <div class="logo">
-      <img src="../../public/images/main-logo.svg" alt="main logo" />
+      <a href="#">
+        <img src="../../public/images/main-logo.svg" alt="main logo" />
+      </a>
     </div>
     <nav>
       <ul class="ul">
@@ -78,8 +80,10 @@ import "../styles/global.css";
     padding-right: 50px;
     border-bottom: 1px solid black;
   }
+
   .info-list {
     font-size: 0.8rem;
+    margin: auto 0 auto 50px;
   }
   .info-list li {
     border-right: 0.5px solid black;
@@ -87,6 +91,9 @@ import "../styles/global.css";
   }
   .info-list li:last-child {
     border: none;
+  }
+  .sns-icons {
+    margin: auto 0;
   }
   .sns-icons img {
     margin: 0 10px;
@@ -101,6 +108,9 @@ import "../styles/global.css";
     padding-left: 50px;
     padding-right: 50px;
     border-bottom: 1px solid #676767;
+  }
+  .container nav {
+    margin: auto 0;
   }
   .logo {
     margin: auto 0;
@@ -123,7 +133,7 @@ import "../styles/global.css";
   .container .hum-btn {
     justify-content: center;
     align-items: center;
-    position: fixed;
+    position: absolute;
     top: 35px;
     right: 30px;
     transform: translateY(-50%);
@@ -170,6 +180,8 @@ import "../styles/global.css";
       top: 72px;
       left: 0px;
       width: 100%;
+      padding-top: 40px;
+      padding-bottom: 50px;
       background-color: blanchedalmond;
       transition: all 0.5s ease;
     }
@@ -180,9 +192,16 @@ import "../styles/global.css";
   document.addEventListener("DOMContentLoaded", () => {
     const humBtn = document.querySelector(".hum-btn");
     const menu = document.querySelector("nav");
+    const humMenu = document.querySelectorAll(".ul li ");
 
     humBtn.addEventListener("click", () => {
       menu.classList.toggle("open");
+    });
+
+    humMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
     });
   });
 </script>
