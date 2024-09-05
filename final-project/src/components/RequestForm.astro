@@ -29,6 +29,7 @@ const userId = import.meta.env.PUBLIC_USER_ID;
           <div class="input-vertical">
             <label for="service">Select service</label>
             <select name="service" id="service">
+              <option value="no-select"></option>
               <option value="window">Window</option>
               <option value="residential">Residential</option>
               <option value="commercial">Commercial</option>
@@ -37,6 +38,7 @@ const userId = import.meta.env.PUBLIC_USER_ID;
           <div class="input-vertical">
             <label for="time">Select time</label>
             <select name="time" id="time">
+              <option value="no-select"></option>
               <option value="morning">Morning</option>
               <option value="noon">Noon</option>
               <option value="afternoon">Afternoon</option>
@@ -45,13 +47,13 @@ const userId = import.meta.env.PUBLIC_USER_ID;
         </div>
         <div class="input-vertical">
           <label for="message">Message</label>
-          <textarea name="message" id="message"></textarea>
+          <textarea name="message" id="message" placeholder="Type your message..."></textarea>
         </div>
         <div>
           <input type="checkbox" name="terms" id="terms" required />
           <label for="terms">I accept the <span>Terms</span></label>
         </div>
-        <input class="btn" type="submit" value="Send" />
+        <input class="btn" type="submit" value="Submit" />
       </form>
     </div>
     <img src="/images/contact.png" alt="woman" class="image" />
@@ -109,9 +111,10 @@ const userId = import.meta.env.PUBLIC_USER_ID;
   input,
   textarea,
   select {
-    padding: 15px 8px;
+    padding: 15px 12px;
     border-radius: 5px;
     border: 1px solid var(--color_black);
+    font-family: "Roboto", sans-serif;
   }
 
   textarea {
