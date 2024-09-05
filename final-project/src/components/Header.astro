@@ -6,7 +6,7 @@ import "../styles/global.css";
   <div class="banner">
     <div class="info-list">
       <ul>
-        <li>For emergency cases: 567 123 45 67</li>
+        <li><span>For emergency cases: 567 123 45 67</span></li>
         <li>Location: 121 Wallstreet Street, NY , USA</li>
         <li>Open hours: 9.00-24.00 Mon-Sat</li>
         <li>Email:info@ddsgnr.com</li>
@@ -76,6 +76,7 @@ import "../styles/global.css";
     position: sticky;
     top: 0;
     background-color: var(--color_white);
+    z-index: 9999;
   }
 
   ul {
@@ -105,6 +106,10 @@ import "../styles/global.css";
   .info-list li {
     border-right: 0.5px solid black;
     padding: 0 0.5rem 0;
+  }
+  .info-list span{
+    font-size: 16px;
+    font-weight: 600;
   }
   .info-list li:last-child {
     border: none;
