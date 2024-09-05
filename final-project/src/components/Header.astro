@@ -54,7 +54,7 @@ import "../styles/global.css";
       <img src="../../public/images/Menu.svg" alt="hum menu" />
     </div>
     <div class="logo">
-      <a href="#">
+      <a href="/">
         <img src="../../public/images/main-logo.svg" alt="main logo" />
       </a>
     </div>
@@ -72,6 +72,12 @@ import "../styles/global.css";
 </header>
 
 <style>
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color_white);
+  }
+
   ul {
     display: flex;
   }
@@ -163,7 +169,7 @@ import "../styles/global.css";
   }
 
   /* ---------responsive--------- */
-  @media screen and (max-width: 680px) {
+  @media screen and (max-width: 850px) {
     .hum-btn {
       display: flex;
     }
