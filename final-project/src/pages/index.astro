@@ -3,17 +3,21 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import QuoteMini from "../components/QuoteMini.astro";
 import TopMain from "../components/TopMain.astro";
 import Pictures from "../components/Pictures.astro";
+import AboutUs from "../components/AboutUs.astro";
+import OurTeam from "../components/OurTeam.astro"
 import RequestForm from "../components/RequestForm.astro";
 import CTA from "../components/CTA.astro";
 import NewsLetter from "../components/NewsLetter.astro";
 
-const title = 'Ddsgnr'
+const title = 'Home'
 ---
 
 <BaseLayout title={title}>
   <TopMain />
   <QuoteMini />
   <Pictures />
+  <AboutUs />
+  <OurTeam />
   <RequestForm />
   <CTA />
   <NewsLetter />
