@@ -1,0 +1,92 @@
+---
+import '../styles/global.css';
+---
+
+<section class="cta">
+  <div class="cta-contents">
+    <div class="cta-info">
+      <h2 class="title">How we can help...</h2>
+      <p class="text">We offer a wide range of procedures to help you get the perfect smile. <br><span class="link-text">Request a quote</span></p>
+    </div>
+    <button class="btn">Request a quote</button>
+  </div>
+</section>
+
+<style>
+  section {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .cta {
+    padding: 48px 24px;
+  }
+
+  .cta-contents {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+    border: 1px solid var(--color_black);
+    padding: 24px;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 24px;
+    font-weight: 700;
+  }
+
+  .text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+  }
+
+  .link-text {
+    text-decoration: underline;
+  }
+
+  .link-text:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  .btn {
+    background-color: var(--color_black);
+    color: var(--color_white);
+    padding: 8px 20px;
+    border-radius: 5px;
+    width: fit-content;
+  }
+
+  .btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+  }
+
+  @media screen and (min-width: 680px) {
+    .cta {
+      padding: 120px 64px;
+      width: 100%;
+    }
+
+    .cta-contents {
+      flex-direction: row;
+      gap: 24px;
+      justify-content: space-between;
+      align-items: center;
+      padding: 48px;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    .title {
+      font-size: 40px;
+    }
+
+    .btn {
+      height: fit-content;
+      padding: 12px 24px;
+    }
+  }
+</style>

@@ -1,16 +1,24 @@
 ---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import QuoteMini from "../components/QuoteMini.astro";
+import TopMain from "../components/TopMain.astro";
+import Pictures from "../components/Pictures.astro";
+import AboutUs from "../components/AboutUs.astro";
+import OurTeam from "../components/OurTeam.astro"
+import RequestForm from "../components/RequestForm.astro";
+import CTA from "../components/CTA.astro";
+import NewsLetter from "../components/NewsLetter.astro";
 
+const title = 'Home'
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title={title}>
+  <TopMain />
+  <QuoteMini />
+  <Pictures />
+  <AboutUs />
+  <OurTeam />
+  <RequestForm />
+  <CTA />
+  <NewsLetter />
+</BaseLayout>

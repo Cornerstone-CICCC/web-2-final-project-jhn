@@ -1,0 +1,207 @@
+---
+import "../styles/global.css"
+---
+<footer>
+    <div class="footer-area">
+        <div class="footer">
+            <div class="container upper-area">
+                <div class="logo-area">
+                    <a href="#top"><img src="../../public/images/main-logo.svg"></a>
+                    <div class="subscribe-area">
+                        <p>Join our newsletter to stay up to date on features and releases.</p>
+                        <div class="form-area">
+                            <input placeholder="Enter your email">
+                            <button>Subscribe</button>
+                        </div>
+                        <p>By subscribing you agree to with our Privacy Policy and provide consent to receive updates from our company.</p>
+                    </div>
+                    <div class="link-area">
+                        <ul class="page-links">
+                            <li><a href="/about"><strong>About</strong></a></li>
+                            <li><a href="#"><strong>Project</strong></a></li>
+                            <li><a href="/contact"><strong>Contact</strong></a></li>
+                            <li><a href="/services"><strong>Services</strong></a></li>
+                        </ul>
+                        <ul class="icon-links">
+                            <li><a href="https://www.facebook.com/" target="_blank"><img src="../../public/images/icons/Facebook.svg"></a></li>
+                            <li><a href="https://www.instagram.com/" target="_blank"><img src="../../public/images/icons/Instagram.svg"></a></li>
+                            <li><a href="https://x.com" target="_blank"><img src="../../public/images/icons/Twitter.svg"></a></li>
+                            <li><a href="https://www.linkedin.com" target="_blank"><img src="../../public/images/icons/LinkedIn.svg"></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map-area">
+                    <div class="map-container">
+                        <div class="about-us links">
+                            <strong class="list-heading">About Us</strong>
+                            <ul>
+                                <li><a href="#top">Home</a></li>
+                                <li><a href="/about">About</a></li>
+                                <li><a href="/services">Services</a></li>
+                                <li><a href="#">Teams</a></li>
+                                <li><a href="/contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        <div class="services links">
+                            <strong class="list-heading">Services</strong>
+                            <ul>
+                                <li>Window</li>
+                                <li>Residential</li>
+                                <li>Commercial</li>
+                                <li>Apartment</li>
+                                <li>Residential</li>
+                            </ul>
+                        </div>
+                        <div class="follow-us links">
+                            <strong class="list-heading">Follow Us</strong>
+                            <ul class="SNS-links">
+                                <a href="https://www.facebook.com/" target="_blank"><li><img src="../../public/images/icons/Facebook.svg"><span>Facebook</span></li></a>
+                                <a href="https://www.instagram.com/" target="_blank"><li><img src="../../public/images/icons/Instagram.svg"><span>Instagram</span></li></a>
+                                <a href="https://x.com" target="_blank"><li><img src="../../public/images/icons/Twitter.svg"><span>Twitter</span></li></a>
+                                <a href="https://www.linkedin.com" target="_blank"><li><img src="../../public/images/icons/LinkedIn.svg"><span>LinkdIn</span></li></a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container lower-area">
+                <p class="copyright-text">2023 Ddsgnr. All right reserved.</p>
+                <ul class="term-list">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookies Settings</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    footer{
+        width: 100%;
+        padding-top: 100px;
+    }
+    input{
+        width: 60%;
+        padding: 8px 5px;
+        border-radius: 5px;
+        border: solid 1px black;
+    }
+    button{
+        padding: 8px 20px;
+        background-color: white;
+        border-radius: 5px;
+        border: solid 1px black;
+    }
+    ul{
+        text-align: left;
+        padding-left: 0;
+    }
+    li{
+        list-style: none;
+        padding: .5rem 0;
+    }
+    a{
+        color: black;
+    }
+    .footer-area{
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 80;
+        padding-bottom: 100px;
+    }
+    .container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .logo-area{
+        width: 40%;
+    }
+    .subscribe-area p{
+        padding: 20px 0;
+        font-size: 16px;
+    }
+    .link-area{
+        display: none;
+    }
+    .map-area{
+        width: 50%;
+        padding-right: 20px;
+    }
+    .list-heading{
+        font-weight: bold;
+    }
+    .links ul{
+        margin-top: 20px;
+    }
+    .map-area a{
+        text-decoration: none;
+    }
+    .SNS-links li{
+        display: flex;
+        align-items: center;
+    }
+    .map-container, .term-list{
+        display: flex;
+        justify-content: space-around;
+    }
+    .lower-area{
+        margin-top: 80px;
+        padding-top: 1rem;
+        border-top: solid 1px black;
+    }
+    .term-list{
+        right: 0;
+        font-size: 14px;
+    }
+    .term-list li{
+        padding: 0 8px;
+    }
+    @media screen and (max-width: 680px) {
+        .container{
+            text-align: center;
+            display: block;
+        }
+        .logo-area{
+            width: 100%;
+            text-align: center;
+        }
+        .subscribe-area{
+            display: none;
+        }
+        .link-area{
+            display: block;
+        }
+        .page-links{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            font-weight: bold;
+        }
+        .icon-links{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .link-area li{
+            margin: 0 10px;
+        }
+        .link-area a{
+            text-decoration: none;
+        }
+        .map-area{
+            display: none;
+        }
+        .lower-area{
+            margin-top: 10px;
+        }
+        .copyright-text{
+            display: block;
+            margin-top: 1rem;
+        }
+        .term-list{
+            margin-top: 2rem;
+        }
+    }
+</style>

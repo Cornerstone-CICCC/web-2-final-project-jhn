@@ -1,0 +1,232 @@
+---
+import "../styles/global.css";
+---
+
+<header>
+  <div class="banner">
+    <div class="info-list">
+      <ul>
+        <li><span>For emergency cases: 567 123 45 67</span></li>
+        <li>Location: 121 Wallstreet Street, NY , USA</li>
+        <li>Open hours: 9.00-24.00 Mon-Sat</li>
+        <li>Email:info@ddsgnr.com</li>
+      </ul>
+    </div>
+    <div class="sns-icons">
+      <ul>
+        <li>
+          <a href="https://www.facebook.com" target="_blank">
+            <img
+              src="../../public/images/icons/Facebook.svg"
+              alt="Facebook icon"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="https://www.instagram.com" target="_blank">
+            <img
+              src="../../public/images/icons/Instagram.svg"
+              alt="Instagram icon"
+            /></a
+          >
+        </li>
+        <li>
+          <a href="https://x.com/i/flow/login" target="_blank">
+            <img
+              src="../../public/images/icons/Twitter.svg"
+              alt="Twitter icon"
+            />
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com" target="_blank">
+            <img
+              src="../../public/images/icons/LinkedIn.svg"
+              alt="LinkedIn icon"
+            /></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="container">
+    <div class="hum-btn">
+      <img src="../../public/images/Menu.svg" alt="hum menu" />
+    </div>
+    <div class="logo">
+      <a href="/">
+        <img src="../../public/images/main-logo.svg" alt="main logo" />
+      </a>
+    </div>
+    <nav>
+      <ul class="ul">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="#">Teams</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/contact">Request A Quote</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  header {
+    position: sticky;
+    top: 0;
+    background-color: var(--color_white);
+    z-index: 9999;
+  }
+
+  ul {
+    display: flex;
+  }
+  li {
+    list-style: none;
+  }
+  ul li a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .banner {
+    display: flex;
+    width: 100%;
+    height: 54px;
+    justify-content: space-between;
+    padding-right: 50px;
+    border-bottom: 1px solid black;
+  }
+
+  .info-list {
+    font-size: 0.8rem;
+    margin: auto 0 auto 50px;
+  }
+  .info-list li {
+    border-right: 0.5px solid black;
+    padding: 0 0.5rem 0;
+  }
+  .info-list span{
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .info-list li:last-child {
+    border: none;
+  }
+  .sns-icons {
+    margin: auto 0;
+  }
+  .sns-icons img {
+    margin: 0 10px;
+  }
+
+  .container {
+    position: relative;
+    width: 100%;
+    height: 74px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-bottom: 1px solid #676767;
+  }
+  .container nav {
+    margin: auto 0;
+  }
+  .logo {
+    margin: auto 0;
+  }
+  .ul {
+    gap: 1.5rem;
+  }
+  .ul li {
+    padding: 0.5rem;
+  }
+
+  .ul li:last-child a {
+    background-color: black;
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+
+  /* ---------hum-btn---------- */
+  .container .hum-btn {
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35px;
+    right: 30px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 12;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .container {
+    position: relative;
+  }
+
+  .hum-btn {
+    display: none;
+  }
+
+  /* ---------responsive--------- */
+  @media screen and (max-width: 850px) {
+    .hum-btn {
+      display: flex;
+    }
+    .banner {
+      display: none;
+    }
+    ul {
+      flex-direction: column;
+    }
+    nav {
+      display: none;
+      position: absolute;
+      top: 72px;
+      left: 1000px;
+      transition: left 0.5s ease;
+    }
+    ul li:last-child {
+      margin-left: -10px;
+    }
+    .container {
+      padding-left: 30px;
+    }
+    .ul {
+      padding-left: 75px;
+    }
+    .open {
+      display: block;
+      top: 72px;
+      left: 0px;
+      width: 100%;
+      padding-top: 40px;
+      padding-bottom: 50px;
+      background-color: #f7f7f7;
+      transition: left 0.5s ease;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const humBtn = document.querySelector(".hum-btn");
+    const menu = document.querySelector("nav");
+    const humMenu = document.querySelectorAll(".ul li ");
+
+    humBtn.addEventListener("click", () => {
+      menu.classList.toggle("open");
+    });
+
+    humMenu.forEach((item) => {
+      item.addEventListener("click", () => {
+        menu.classList.toggle("open");
+      });
+    });
+  });
+</script>
